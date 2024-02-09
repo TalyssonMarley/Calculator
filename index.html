@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" href="favicon.svg">
+
+    <link rel="stylesheet" href="style.css">
+
+    <title>Calculator</title>
+</head>
+<body>
+
+    <div class="container">
+
+        <table class="calculator">
+            <tr>
+                <td colspan="4">
+                    <input type="text" id="display" readonly> 
+                </td>
+            </tr>
+                <tr>
+                    <td><button class="calculatorBtn" id="clear" value="C">C</button></td>
+                    <td><button class="calculatorBtn" id="delDigit" value="CE">CE</button></td>
+                    <td><button class="calculatorBtn" id="division" value="/">&divide;</button></td>
+                    <td><button class="calculatorBtn" id="multiplication" value="*">&times;</button></td>
+                </tr>
+
+                <tr>
+                    <td><button class="calculatorBtn" id="num7" value="7">7</button></td>
+                    <td><button class="calculatorBtn" id="num8" value="8">8</button></td>
+                    <td><button class="calculatorBtn" id="num9" value="9">9</button></td>
+                    <td><button class="calculatorBtn" id="subtraction" value="-">-</button></td>
+                </tr>
+
+                <tr>
+                    <td><button class="calculatorBtn" id="num4" value="4">4</button></td>
+                    <td><button class="calculatorBtn" id="num5" value="5">5</button></td>
+                    <td><button class="calculatorBtn" id="num6" value="6">6</button></td>
+                    <td><button class="calculatorBtn" id="sum" value="+">+</button></td>
+                </tr>
+
+                <tr>
+                    <td><button class="calculatorBtn" id="num1" value="1">1</button></td>
+                    <td><button class="calculatorBtn" id="num2" value="2">2</button></td>
+                    <td><button class="calculatorBtn" id="num3" value="3">3</button></td>
+                    <td rowspan="3"><button class="calculatorBtn" id="result" value="=">=</button></td>
+                </tr>
+
+                <tr>
+                    <td colspan="2"><button class="calculatorBtn" id="num0" value="0">0</button></td>
+                    <td><button class="calculatorBtn" id="point" value=".">.</button></td>
+                </tr>
+        </table>
+
+    </div>
+
+
+
+    <script src="main.js"></script>
+</body>
+</html>

@@ -42,7 +42,10 @@ function writeOnDisplay() {
     } else if (lastDigit === 'CE') {
         delLastDigit();
     } else if (lastDigit === ".") {
-        addPoint();
+        if(pointCounter < listenerBtn.length) {
+            addPoint();
+        }
+
     } else if(verifyOperators(lastDigit)) {
         addOperator()
     } else {
@@ -86,13 +89,14 @@ function addPoint () {
 
 let operator = "";
 
-function verifyOperators(operatorValue) {
-    switch(operatorValue) {
+function verifyOperators(lastDigit) {
+    switch(lastDigit) {
         case "+":
         case "-":
         case "*":
         case "/":
-            return operator = operatorValue;
+            pointCounter = "0"
+            return operator = lastDigit;
         default:
             return false;
     }

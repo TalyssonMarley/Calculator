@@ -1,5 +1,8 @@
 # 📚 Sobre o Code
-  O código ainda tem alguns problemas, esse é o primiero commit então tenho que melhoras uma coisas.
+  * Capaz de realizar as quatros operações aritiméticas;
+  * Limita o uso de ponto flutuante ".";
+  * Função de limpar o display (C) e de deletar o último caractere digitado (CE)
+  * Limita o número de operadores;
 ## 👨‍💻 Tecnologias 
 
 ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white) 

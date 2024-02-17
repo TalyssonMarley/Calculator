@@ -37,18 +37,26 @@ const operators = ["+", "-", "*", "/"]
 function writeOnDisplay() {
     if(lastDigit === '=') {
         calcResult();
-    } else if (lastDigit === 'C') {
+    } 
+    else if (lastDigit === 'C') {
         clean();
-    } else if (lastDigit === 'CE') {
+    } 
+    else if (lastDigit === 'CE') {
         delLastDigit();
-    } else if (lastDigit === ".") {
+    } 
+    else if (lastDigit === ".") {
         if(pointCounter < listenerBtn.length) {
             addPoint();
         }
-
-    } else if(verifyOperators(lastDigit)) {
+    } 
+    else if(verifyOperators(lastDigit)) {
         addOperator()
-    } else {
+    } 
+    else if (resultStatus === true) {
+        clean();
+        writeOnDisplay();
+    }
+    else {
         display.value += lastDigit;
     };
 };
@@ -57,6 +65,7 @@ function clean() {
     display.value = "";
     pointCounter = 0;
     operatorCounter = 0;
+    resultStatus = false;
 };
 
 function delLastDigit() {
@@ -68,11 +77,16 @@ function delLastDigit() {
     display.value = display.value.substring(0, display.value.length - 1);
 };
 
+let resultStatus = false;
+
 function calcResult() {
     const expression = display.value;
     const result = eval(expression);
 
     display.value = result;
+    resultStatus = true;
+
+    return resultStatus;
 };
 
 let pointCounter = 0;
